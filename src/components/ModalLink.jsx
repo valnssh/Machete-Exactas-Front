@@ -16,6 +16,7 @@ function validateLink(link) {
         'drive.google.com',
         'github.com',
         'gitlab.com',
+        'git.exactas.uba.ar',
         'dm.uba.ar',
         'df.uba.ar'
     ];
