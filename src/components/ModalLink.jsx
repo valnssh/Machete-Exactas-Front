@@ -70,7 +70,7 @@ export default function ModalLink({
                 )
             ) {
                 alert(
-                    'Link inválido. Tiene que empezar con https:// y ser de drive, github, imgur, páginas del dm, df o del campus.',
+                    'Link inválido. Tiene que empezar con https:// y ser de drive, github, gitlab, git de la facultad, imgur, páginas del dm, df o del campus.',
                 );
                 return;
             }
