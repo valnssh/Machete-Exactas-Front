@@ -9,10 +9,20 @@ const axiosResueltos = axios.create({
 });
 
 function validateLink(link) {
-    const sources = ['campus.exactas', 'imgur', 'drive.google.com', 'github', 'dm.uba', 'df.uba'];
-    const validSource = sources.some(
-        (source) => link.includes(source) && link.includes('https://'),
-    );
+    const validDomains = [
+        'campus.exactas.uba.ar',
+        'imgur.com',
+        'drive.google.com',
+        'github.com',
+        'dm.uba.ar',
+        'df.uba.ar'
+    ];
+    
+    const createDomainPattern = (domain) => 
+        new RegExp(`^https:\\/\\/([a-zA-Z0-9-]+\\.)*${domain.replace(/\./g, '\\.')}`, 'i');
+    
+    const validDomainPatterns = validDomains.map(createDomainPattern);
+    const validSource = validDomainPatterns.some(pattern => pattern.test(link));
     const properLength = link.length < 340;
 
     return validSource && properLength;
