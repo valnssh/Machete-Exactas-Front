@@ -10,6 +10,7 @@ const axiosResueltos = axios.create({
 
 function validateLink(link) {
     const validDomains = [
+        'campus12-24.exactas.uba.ar',
         'campus.exactas.uba.ar',
         'imgur.com',
         'drive.google.com',
