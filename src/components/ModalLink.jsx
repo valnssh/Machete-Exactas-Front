@@ -15,6 +15,7 @@ function validateLink(link) {
         'imgur.com',
         'drive.google.com',
         'github.com',
+        'gitlab.com',
         'dm.uba.ar',
         'df.uba.ar'
     ];
